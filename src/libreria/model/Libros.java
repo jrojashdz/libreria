@@ -31,7 +31,8 @@ import javax.persistence.Table;
     @NamedQuery(name = "Libros.findByCodigo", query = "SELECT l FROM Libros l WHERE l.codigo = :codigo"),
     @NamedQuery(name = "Libros.findByNumeropaginas", query = "SELECT l FROM Libros l WHERE l.numeropaginas = :numeropaginas"),
     @NamedQuery(name = "Libros.findByAnio", query = "SELECT l FROM Libros l WHERE l.anio = :anio"),
-    @NamedQuery(name = "Libros.findByPrecio", query = "SELECT l FROM Libros l WHERE l.precio = :precio")})
+    @NamedQuery(name = "Libros.findByPrecio", query = "SELECT l FROM Libros l WHERE l.precio = :precio"),
+    @NamedQuery(name = "Libros.findByNombreAutor", query = "SELECT l FROM Libros l WHERE l.nombre = :nombre OR l.autor= :autor")})
 public class Libros implements Serializable {
 
     private static final long serialVersionUID = 1L;
