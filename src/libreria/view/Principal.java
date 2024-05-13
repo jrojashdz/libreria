@@ -130,7 +130,7 @@ public class Principal extends javax.swing.JFrame {
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         // TODO add your handling code here:
         String texto = txtBuscar.getText();
-        LibrosJpaController control = new LibrosJpaController(Persistence.createEntityManagerFactory("libraryPU"));
+        LibrosJpaController control = new LibrosJpaController(Persistence.createEntityManagerFactory("libreriaPU"));
         List<Libros> libros  = control.findLibrosEntities();
         Util util = new Util();
         tablaResultados.setModel(util.addToTable( libros));
